@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Screenshots | ResQConnect Capstone Project</title>
+    <meta name="description" content="Screenshots of the ResQConnect flood monitoring and multi-agency emergency response system for Lumban, Laguna." />
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png" />
+    <link rel="apple-touch-icon" href="assets/images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <!-- Navigation Topbar -->
+      <header class="topbar">
+        <div class="container nav">
+          <a class="brand-wrap" href="index.html">
+            <img src="assets/images/logo.png" alt="ResQConnect Logo" class="brand-logo" />
+            <div class="brand-copy">
+              <span class="brand-kicker">Municipality of Lumban, Laguna</span>
+              <strong>Capstone Project</strong>
+            </div>
+          </a>
+
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html#overview">Overview</a>
+            <a href="index.html#problem">Problem</a>
+            <a href="index.html#objectives">Objectives</a>
+            <a href="index.html#methodology">Methodology</a>
+            <a href="index.html#testing">Testing</a>
+            <a href="index.html#features">Features</a>
+            <a href="index.html#screenshots">Screenshots</a>
+            <a href="index.html#workflow">Workflow</a>
+            <a href="index.html#team">Team</a>
+          </nav>
+
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="section screenshot-detail-section">
+          <div class="container">
+            <a class="screenshot-back-link" href="index.html#screenshots">&larr; Back to screenshot gallery</a>
+
+            <div class="section-heading">
+              <span class="section-kicker">System Interfaces</span>
+              <h2>System Screenshots</h2>
+              <p class="section-subtitle">
+                Select an interface, then click any available mobile screen to enlarge it.
+              </p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="screenshot-tabs" role="tablist" aria-label="System interfaces">
+              <button id="tab-mdrrmo" class="screenshot-tab" type="button" role="tab" aria-selected="true" aria-controls="mdrrmo-portal" tabindex="0">MDRRMO Web Portal</button>
+              <button id="tab-mswdo" class="screenshot-tab" type="button" role="tab" aria-selected="false" aria-controls="mswdo-portal" tabindex="-1">MSWDO Web Portal</button>
+              <button id="tab-responders" class="screenshot-tab" type="button" role="tab" aria-selected="false" aria-controls="responders-app" tabindex="-1">Responders Mobile App</button>
+              <button id="tab-residents" class="screenshot-tab" type="button" role="tab" aria-selected="false" aria-controls="residents-app" tabindex="-1">Residents Mobile App</button>
+            </div>
+
+            <!-- Tab 1: MDRRMO -->
+            <section id="mdrrmo-portal" class="screenshot-tab-panel" role="tabpanel" aria-labelledby="tab-mdrrmo" tabindex="0">
+              <div class="screenshot-panel-heading">
+                <h2>MDRRMO Web Portal</h2>
+                <p>Flood monitoring, early warnings, and emergency response coordination.</p>
+              </div>
+
+              <div class="screenshot-screen-grid">
+                <article class="screenshot-screen-card">
+                  <div class="screenshot-screen-thumb">
+                    <p>MDRRMO Portal Screenshot</p>
+                  </div>
+                  <h3 class="screenshot-screen-title">Portal Overview</h3>
+                </article>
+              </div>
+            </section>
+
+            <!-- Tab 2: MSWDO -->
+            <section id="mswdo-portal" class="screenshot-tab-panel" role="tabpanel" aria-labelledby="tab-mswdo" tabindex="0" hidden>
+              <div class="screenshot-panel-heading">
+                <h2>MSWDO Web Portal</h2>
+                <p>Evacuation center coordination and support for vulnerable groups.</p>
+              </div>
+
+              <div class="screenshot-screen-grid">
+                <article class="screenshot-screen-card">
+                  <div class="screenshot-screen-thumb">
+                    <p>MSWDO Portal Screenshot</p>
+                  </div>
+                  <h3 class="screenshot-screen-title">Portal Overview</h3>
+                </article>
+              </div>
+            </section>
+
+            <!-- Tab 3: Responders Mobile App -->
+            <section id="responders-app" class="screenshot-tab-panel" role="tabpanel" aria-labelledby="tab-responders" tabindex="0" hidden>
+              <div class="screenshot-panel-heading">
+                <h2>Responders Mobile App</h2>
+                <p>Dispatch, live tracking, and rescue coordination tools for emergency personnel.</p>
+              </div>
+
+              <div class="screenshot-screen-grid">
+                <article class="screenshot-screen-card">
+                  <button class="screenshot-image-button" type="button" data-screenshot-src="assets/images/Responders%20Homepage.jpg" data-screenshot-alt="Responders Mobile App showing the BFP dashboard and flood response tools" aria-label="Enlarge Responders Mobile App home screen">
+                    <img class="screenshot-detail-image" src="assets/images/Responders%20Homepage.jpg" alt="Responders Mobile App showing the BFP dashboard and flood response tools" />
+                  </button>
+                  <h3 class="screenshot-screen-title">Home Screen</h3>
+                </article>
+              </div>
+            </section>
+
+            <!-- Tab 4: Residents Mobile App -->
+            <section id="residents-app" class="screenshot-tab-panel" role="tabpanel" aria-labelledby="tab-residents" tabindex="0" hidden>
+              <div class="screenshot-panel-heading">
+                <h2>Residents Mobile App</h2>
+                <p>Flood alerts, safe-route guidance, and emergency SOS access for community members.</p>
+              </div>
+
+              <div class="screenshot-screen-grid">
+                <article class="screenshot-screen-card">
+                  <button class="screenshot-image-button" type="button" data-screenshot-src="assets/images/Residents%20Homepage.jpg" data-screenshot-alt="Residents Mobile App showing flood status, emergency actions, and local weather" aria-label="Enlarge Residents Mobile App home screen">
+                    <img class="screenshot-detail-image" src="assets/images/Residents%20Homepage.jpg" alt="Residents Mobile App showing flood status, emergency actions, and local weather" />
+                  </button>
+                  <h3 class="screenshot-screen-title">Home Screen</h3>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-bottom">
+            <p>&copy; 2026 ResQConnect. Municipality of Lumban, Laguna &bull; Laguna State Polytechnic University.</p>
+            <a href="index.html" class="btn btn-outline-white btn-sm">Back to Project</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <dialog class="screenshot-lightbox" id="screenshot-lightbox" aria-labelledby="lightbox-caption">
+      <div class="lightbox-content-box">
+        <button class="screenshot-lightbox-close" type="button" aria-label="Close enlarged screenshot">&times;</button>
+        <img id="lightbox-image" alt="" />
+        <div class="lightbox-caption-bar">
+          <span id="lightbox-caption"></span>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/screenshots.js"></script>
+  </body>
+</html>

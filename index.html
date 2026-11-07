@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Development of an Image-Processing-Driven Flood Monitoring and Predictive Evacuation System for Municipality of Lumban, Laguna</title>
+    <meta
+      name="description"
+      content="Development of an Image-Processing-Driven Flood Monitoring and Predictive Evacuation System for Municipality of Lumban, Laguna."
+    />
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png" />
+    <link rel="apple-touch-icon" href="assets/images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <!-- Main Topbar Navigation -->
+      <header class="topbar">
+        <div class="container nav">
+          <a href="#top" class="brand-wrap">
+            <img src="assets/images/logo.png" alt="ResQConnect Logo" class="brand-logo" />
+            <div class="brand-copy">
+              <span class="brand-kicker">Municipality of Lumban, Laguna</span>
+              <strong>Capstone Project</strong>
+            </div>
+          </a>
+
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="#overview">Overview</a>
+            <a href="#problem">Problem</a>
+            <a href="#objectives">Objectives</a>
+            <a href="#methodology">Methodology</a>
+            <a href="#testing">Testing</a>
+            <a href="#features">Features</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#workflow">Workflow</a>
+            <a href="#team">Team</a>
+          </nav>
+
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero Section -->
+        <section class="hero" id="top">
+          <div class="container">
+            <div class="hero-content">
+              <span class="hero-meta-badge">Capstone Project &bull; BS Information Technology &bull; LSPU</span>
+              <h1>
+                Smart Flood Response<br />
+                Through Image Analysis<br />
+                and Predictive Planning
+              </h1>
+              <p class="hero-subtitle">
+                Development of an Image-Processing-Driven Flood Monitoring and Predictive Evacuation System
+              </p>
+              <p class="hero-location">
+                For the Municipality of Lumban, Laguna
+              </p>
+
+              <div class="hero-actions">
+                <a href="#overview" class="btn btn-white">View the System</a>
+                <a href="#features" class="btn btn-outline-white">Read the Research</a>
+              </div>
+
+              <div class="hero-key-facts">
+                <div class="fact-item">
+                  <strong>5 Levels</strong>
+                  <span>MDRRMO Flood Thresholds</span>
+                </div>
+                <div class="fact-item">
+                  <strong>7 Groups</strong>
+                  <span>Stakeholders &amp; Agencies</span>
+                </div>
+                <div class="fact-item">
+                  <strong>185 Users</strong>
+                  <span>TAM Evaluation Sample</span>
+                </div>
+                <div class="fact-item">
+                  <strong>Agile SDLC</strong>
+                  <span>7 Iterative Phases</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Research Overview / Research Title -->
+        <section id="overview" class="section section-alt">
+          <div class="container">
+            <div class="research-title-card">
+              <span class="research-title-kicker">Research Title</span>
+              <h2>
+                Development of an Image-Processing-Driven Flood Monitoring and Predictive Evacuation System for the Municipality of Lumban, Laguna
+              </h2>
+              <p class="research-summary-text">
+                This capstone project develops a system that helps local communities monitor flood risk, analyze visual indicators, and support timely evacuation planning through predictive and data-driven decision support.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Statement of the Problem -->
+        <section id="problem" class="section">
+          <div class="container">
+            <div class="section-heading">
+              <span class="section-kicker">Statement of the Problem</span>
+              <h2>Research Problems &amp; Scope</h2>
+              <p class="section-subtitle">
+                The formulation of the Image Processing-Driven Flood Monitoring and Predictive Evacuation System for the Municipality of Lumban, Laguna, is necessitated by the recurrent and destructive flooding experienced in the locality. Positioned adjacent to major water bodies such as Laguna de Bay and the Pagsanjan–Lumban River, the municipality is highly susceptible to rapid rises in water levels triggered by heavy rainfall and typhoons.
+              </p>
+            </div>
+
+            <div class="problem-grid">
+              <article class="problem-card">
+                <div class="problem-number">1</div>
+                <div class="problem-body">
+                  <h3>Flood Detection Speed &amp; Accuracy</h3>
+                  <p>
+                    How can the municipality improve the speed and accuracy of flood detection and response during heavy rainfall and power outages using image-processing-based monitoring?
+                  </p>
+                </div>
+              </article>
+
+              <article class="problem-card">
+                <div class="problem-number">2</div>
+                <div class="problem-body">
+                  <h3>Real-Time Alerts &amp; Early Warning</h3>
+                  <p>
+                    How can the system monitor flood conditions in real time and provide automated alerts to support timely evacuation decisions?
+                  </p>
+                </div>
+              </article>
+
+              <article class="problem-card">
+                <div class="problem-number">3</div>
+                <div class="problem-body">
+                  <h3>Multi-Agency Coordination</h3>
+                  <p>
+                    How can the integrated system improve coordination among MDRRMO, PNP, BFP, MSWDO, RHU, barangay personnel, and residents during emergency situations?
+                  </p>
+                </div>
+              </article>
+
+              <article class="problem-card">
+                <div class="problem-number">4</div>
+                <div class="problem-body">
+                  <h3>Preparedness &amp; Decision Support</h3>
+                  <p>
+                    How do the system’s features such as real-time monitoring, automated flood classification, and predictive evacuation guidance support disaster preparedness and response operations?
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Research Objectives -->
+        <section id="objectives" class="section section-alt">
+          <div class="container">
+            <div class="section-heading">
+              <span class="section-kicker">1.2 Research Objectives</span>
+              <h2>Objectives of the Study</h2>
+              <p class="section-subtitle">
+                This study aims to develop and implement an image processing-driven flood monitoring and predictive evacuation system to enhance disaster preparedness and response in the Municipality of Lumban, Laguna. The system is intended to provide accurate water-level detection, timely forecasting, and efficient evacuation guidance for residents and responders.
+              </p>
+            </div>
+
+            <div class="general-objective-box">
+              <span class="box-kicker">General Objective</span>
+              <h3>Design, Develop, Test, and Evaluate</h3>
+              <p>
+                To design, develop, test, and evaluate an Image Processing-Driven Flood Monitoring and Predictive Evacuation System with Multi-Agency Emergency Response for the Municipality of Lumban, Laguna, enhancing real-time flood monitoring, early warning advisory, and disaster response coordination.
+              </p>
+            </div>
+
+            <div class="objectives-stack">
+              <!-- Specific Objective 1 -->
+              <article class="objective-card">
+                <div class="objective-header">
+                  <span class="objective-tag">Specific Objective 1</span>
+                  <h3>Design and Develop the System</h3>
+                </div>
+                <div class="objective-body">
+                  <p>
+                    To design and develop an Image Processing-Driven Flood Monitoring and Predictive Evacuation System for the Municipality of Lumban, Laguna that will integrate secure, user-friendly features across responsive web and mobile platforms.
+                  </p>
+                  <div class="objective-chips-grid">
+                    <div class="objective-chip">
+                      <span class="chip-dot"></span>
+                      <span>MDRRMO &amp; MSWDO Central Web Portals</span>
+                    </div>
+                    <div class="objective-chip">
+                      <span class="chip-dot"></span>
+                      <span>Responders &amp; Residents Mobile Applications</span>
+                    </div>
+                    <div class="objective-chip">
+                      <span class="chip-dot"></span>
+                      <span>Image-Processing &amp; Predictive Analytics Engine</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Specific Objective 2 -->
+              <article class="objective-card">
+                <div class="objective-header">
+                  <span class="objective-tag">Specific Objective 2</span>
+                  <h3>Test the System's Major Functionalities</h3>
+                </div>
+                <div class="objective-body">
+                  <p>
+                    To test the functionalities of the system in order to verify its performance and reliability across established MDRRMO alert thresholds (Normal, Monitor, Alert, Critical, and Evacuate):
+                  </p>
+                  <ul class="feature-check-list">
+                    <li>
+                      <span class="check-num">01</span>
+                      <span>Detect, measure, and classify water levels using image-based flood detection across established MDRRMO thresholds (Normal, Monitor, Alert, Critical, and Evacuate)</span>
+                    </li>
+                    <li>
+                      <span class="check-num">02</span>
+                      <span>Analyze historical flood data and monitor water-level trends</span>
+                    </li>
+                    <li>
+                      <span class="check-num">03</span>
+                      <span>Forecast water-level rise based on the observed rate of change</span>
+                    </li>
+                    <li>
+                      <span class="check-num">04</span>
+                      <span>Generate predictive evacuation recommendations and safe route guidance</span>
+                    </li>
+                    <li>
+                      <span class="check-num">05</span>
+                      <span>Broadcast automated early warning alerts and siren notifications to residents and responders</span>
+                    </li>
+                    <li>
+                      <span class="check-num">06</span>
+                      <span>Transmit emergency SOS rescue requests with live GPS location tagging</span>
+                    </li>
+                    <li>
+                      <span class="check-num">07</span>
+                      <span>Dispatch, track, and coordinate multi-agency emergency responders in real time</span>
+                    </li>
+                    <li>
+                      <span class="check-num">08</span>
+                      <span>Provide an interactive dashboard for centralized flood monitoring and response operations</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Specific Objective 3 -->
+              <article class="objective-card">
+                <div class="objective-header">
+                  <span class="objective-tag">Specific Objective 3</span>
+                  <h3>Evaluate User Acceptance (TAM Framework)</h3>
+                </div>
+                <div class="objective-body">
+                  <p>
+                    To evaluate the platform's user acceptance and behavioral intention using the Technology Acceptance Model (TAM):
+                  </p>
+                  <ul class="tam-grid">
+                    <li class="tam-grid-item">
+                      <span class="tam-num">01</span>
+                      <span>Quality Factors</span>
+                    </li>
+                    <li class="tam-grid-item">
+                      <span class="tam-num">02</span>
+                      <span>Perceived Ease of Use</span>
+                    </li>
+                    <li class="tam-grid-item">
+                      <span class="tam-num">03</span>
+                      <span>Perceived Usefulness</span>
+                    </li>
+                    <li class="tam-grid-item">
+                      <span class="tam-num">04</span>
+                      <span>User Experience</span>
+                    </li>
+                    <li class="tam-grid-item">
+                      <span class="tam-num">05</span>
+                      <span>Attitude Toward Using</span>
+                    </li>
+                    <li class="tam-grid-item">
+                      <span class="tam-num">06</span>
+                      <span>Behavioral Intention to Use</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Methodology -->
+        <section id="methodology" class="section">
+          <div class="container">
+            <div class="section-heading">
+              <span class="section-kicker">Research Methodology</span>
+              <h2>Development Methodology</h2>
+              <p class="section-subtitle">
+                The study used Developmental Research Methodology and descriptive methods to develop and evaluate ResQConnect. System development followed Agile SDLC with input from the MDRRMO and partner agencies.
+              </p>
+            </div>
+
+            <div class="agile-grid">
+              <article class="agile-card">
+                <span class="agile-step-num">01</span>
+                <h4>Requirements Planning</h4>
+                <p>Consultations with the MDRRMO, barangay officials, PNP, BFP, RHU, and MSWDO.</p>
+              </article>
+
+              <article class="agile-card">
+                <span class="agile-step-num">02</span>
+                <h4>Planning</h4>
+                <p>Set the project scope, timeline, and technical resources.</p>
+              </article>
+
+              <article class="agile-card">
+                <span class="agile-step-num">03</span>
+                <h4>Designing</h4>
+                <p>Plan the system architecture, database schema, and interfaces.</p>
+              </article>
+
+              <article class="agile-card">
+                <span class="agile-step-num">04</span>
+                <h4>Development</h4>
+                <p>Build system features and computer vision models through Agile sprints.</p>
+              </article>
+
+              <article class="agile-card">
+                <span class="agile-step-num">05</span>
+                <h4>Testing</h4>
+                <p>Simulate real-world disaster scenarios and use black-box testing to verify functions.</p>
+              </article>
+
+              <article class="agile-card">
+                <span class="agile-step-num">06</span>
+                <h4>Deployment</h4>
+                <p>Install and introduce the system for MDRRMO operational use.</p>
+              </article>
+
+              <article class="agile-card">
+                <span class="agile-step-num">07</span>
+                <h4>Review</h4>
+                <p>Gather user feedback through comprehensive TAM evaluation.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testing & Evaluation -->
+        <section id="testing" class="section section-alt">
+          <div class="container">
+            <div class="section-heading">
+              <span class="section-kicker">Testing &amp; Evaluation</span>
+              <h2>System Testing and Evaluation Procedure</h2>
+              <p class="section-subtitle">
+                Simulation testing of real-world disaster scenarios involved 20 participants. Separately, 10 IT experts conducted black-box functional testing, while 185 residents, barangay officials, and disaster-response agency representatives participated in user evaluation.
+              </p>
+            </div>
+
+            <div class="metrics-row">
+              <div class="metric-card">
+                <span>Simulation Testing</span>
+                <strong>20</strong>
+                <p>Participants tested real-world disaster scenarios.</p>
+              </div>
+
+              <div class="metric-card">
+                <span>Black-Box Testing</span>
+                <strong>10</strong>
+                <p>IT experts tested the system's functionality.</p>
+              </div>
+
+              <div class="metric-card">
+                <span>User Evaluation</span>
+                <strong>185</strong>
+                <p>Respondents from seven stakeholder groups.</p>
+              </div>
+            </div>
+
+            <!-- Distribution Chart -->
+            <div class="chart-box">
+              <h3>Distribution of User-Evaluation Respondents</h3>
+              <p class="chart-box-desc">Total sample size: 185 respondents across municipal agencies and Barangay Wawa</p>
+
+              <div class="bar-chart-list" role="img" aria-label="Horizontal bar graph of 185 respondents">
+                <div class="bar-row">
+                  <span class="bar-label">Barangay Wawa Residents</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div></div>
+                  <strong class="bar-val">98</strong>
+                </div>
+
+                <div class="bar-row">
+                  <span class="bar-label">MDRRMO</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 23.5%;"></div></div>
+                  <strong class="bar-val">23</strong>
+                </div>
+
+                <div class="bar-row">
+                  <span class="bar-label">Bureau of Fire Protection (BFP)</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 17.3%;"></div></div>
+                  <strong class="bar-val">17</strong>
+                </div>
+
+                <div class="bar-row">
+                  <span class="bar-label">Philippine National Police (PNP)</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 17.3%;"></div></div>
+                  <strong class="bar-val">17</strong>
+                </div>
+
+                <div class="bar-row">
+                  <span class="bar-label">Barangay Wawa Officials</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 10.2%;"></div></div>
+                  <strong class="bar-val">10</strong>
+                </div>
+
+                <div class="bar-row">
+                  <span class="bar-label">MSWDO</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 10.2%;"></div></div>
+                  <strong class="bar-val">10</strong>
+                </div>
+
+                <div class="bar-row">
+                  <span class="bar-label">Rural Health Unit (RHU)</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 10.2%;"></div></div>
+                  <strong class="bar-val">10</strong>
+                </div>
+              </div>
+
+              <p class="chart-note">
+                The evaluation questionnaire was based solely on the Technology Acceptance Model (TAM). Responses were analyzed through weighted mean and standard deviation to assess the system's overall acceptability.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Core System Features -->
+        <section id="features" class="section">
+          <div class="container">
+            <div class="section-heading center">
+              <span class="section-kicker">Core Capabilities</span>
+              <h2>System Features</h2>
+              <p class="section-subtitle">
+                Key functionalities developed to support proactive disaster preparedness, early warning, and emergency response operations.
+              </p>
+            </div>
+
+            <div class="features-grid">
+              <article class="feature-box">
+                <span class="feature-num">01</span>
+                <h3>Image-Based Water-Level Detection</h3>
+                <p>Detects and measures water levels, then classifies them as Normal, Monitor, Alert, Critical, or Evacuate.</p>
+              </article>
+
+              <article class="feature-box">
+                <span class="feature-num">02</span>
+                <h3>Historical Flood Analysis</h3>
+                <p>Analyzes historical flood data and tracks water-level trends over time.</p>
+              </article>
+
+              <article class="feature-box">
+                <span class="feature-num">03</span>
+                <h3>Water-Level Forecasting</h3>
+                <p>Forecasts rising water levels based on the observed rate of change in monitored locations.</p>
+              </article>
+
+              <article class="feature-box">
+                <span class="feature-num">04</span>
+                <h3>Predictive Evacuation &amp; Safe Routes</h3>
+                <p>Recommends timely evacuation actions and safer unflooded route guidance.</p>
+              </article>
+
+              <article class="feature-box">
+                <span class="feature-num">05</span>
+                <h3>Automated Alerts and Sirens</h3>
+                <p>Broadcasts early warnings and automated siren alerts to residents and emergency responders.</p>
+              </article>
+
+              <article class="feature-box">
+                <span class="feature-num">06</span>
+                <h3>GPS-Tagged SOS Requests</h3>
+                <p>Sends emergency rescue requests tagged with the sender's live GPS satellite location.</p>
+              </article>
+
+              <article class="feature-box">
+                <span class="feature-num">07</span>
+                <h3>Multi-Agency Coordination</h3>
+                <p>Dispatches, tracks, and coordinates emergency response teams in real time.</p>
+              </article>
+
+              <article class="feature-box">
+                <span class="feature-num">08</span>
+                <h3>Centralized Monitoring Dashboard</h3>
+                <p>Provides an interactive hub for flood monitoring, telemetry, and emergency response operations.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- System Screenshots Section -->
+        <section id="screenshots" class="section section-alt">
+          <div class="container">
+            <div class="section-heading center">
+              <span class="section-kicker">System Gallery</span>
+              <h2>System Screenshots</h2>
+              <p class="section-subtitle">
+                Overview of web portals and mobile applications designed for responders, administrators, and residents.
+              </p>
+            </div>
+
+            <div class="screenshots-grid">
+              <article class="screenshot-card">
+                <div class="screenshot-preview">
+                  <div class="portal-placeholder">
+                    <div class="portal-placeholder-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    </div>
+                    <span class="portal-placeholder-badge">MDRRMO Web Portal</span>
+                  </div>
+                </div>
+                <div class="screenshot-body">
+                  <h3>MDRRMO Web Portal</h3>
+                  <p>Flood monitoring, alerts, and multi-agency response overview.</p>
+                  <a class="screenshot-link" href="screenshots.html#mdrrmo-portal">View screenshots &rarr;</a>
+                </div>
+              </article>
+
+              <article class="screenshot-card">
+                <div class="screenshot-preview">
+                  <div class="portal-placeholder">
+                    <div class="portal-placeholder-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <span class="portal-placeholder-badge">MSWDO Web Portal</span>
+                  </div>
+                </div>
+                <div class="screenshot-body">
+                  <h3>MSWDO Web Portal</h3>
+                  <p>Evacuation center coordination and support for vulnerable groups.</p>
+                  <a class="screenshot-link" href="screenshots.html#mswdo-portal">View screenshots &rarr;</a>
+                </div>
+              </article>
+
+              <article class="screenshot-card">
+                <div class="screenshot-preview">
+                  <img src="assets/images/Responders%20Homepage.jpg" alt="Responders Mobile App showing the BFP dashboard and flood response tools" />
+                </div>
+                <div class="screenshot-body">
+                  <h3>Responders Mobile App</h3>
+                  <p>Dispatch, live tracking, and rescue coordination tools.</p>
+                  <a class="screenshot-link" href="screenshots.html#responders-app">View screenshots &rarr;</a>
+                </div>
+              </article>
+
+              <article class="screenshot-card">
+                <div class="screenshot-preview">
+                  <img src="assets/images/Residents%20Homepage.jpg" alt="Residents Mobile App showing flood status, emergency actions, and local weather" />
+                </div>
+                <div class="screenshot-body">
+                  <h3>Residents Mobile App</h3>
+                  <p>Flood alerts, safe-route guidance, and emergency SOS access.</p>
+                  <a class="screenshot-link" href="screenshots.html#residents-app">View screenshots &rarr;</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Operational Workflow -->
+        <section id="workflow" class="section">
+          <div class="container">
+            <div class="section-heading center">
+              <span class="section-kicker">Operational Workflow</span>
+              <h2>How the System Works</h2>
+              <p class="section-subtitle">
+                The four-step process for automated flood monitoring, classification, and predictive evacuation.
+              </p>
+            </div>
+
+            <div class="workflow-grid">
+              <div class="workflow-card">
+                <span class="workflow-step-badge">1</span>
+                <h3>Data Collection</h3>
+                <p>Captures flood-related images and environmental indicators from monitored areas.</p>
+              </div>
+
+              <div class="workflow-card">
+                <span class="workflow-step-badge">2</span>
+                <h3>Image Processing</h3>
+                <p>Processes visual data to detect water presence, abnormal conditions, and flood patterns.</p>
+              </div>
+
+              <div class="workflow-card">
+                <span class="workflow-step-badge">3</span>
+                <h3>Risk Analysis</h3>
+                <p>Assesses severity and predicts escalation using flood conditions and situational cues.</p>
+              </div>
+
+              <div class="workflow-card">
+                <span class="workflow-step-badge">4</span>
+                <h3>Evacuation Guidance</h3>
+                <p>Recommends response actions and supports timely evacuation when alert levels rise.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Research Team Section -->
+        <section id="team" class="section section-alt">
+          <div class="container">
+            <div class="section-heading center">
+              <span class="section-kicker">Research Team</span>
+              <h2>Capstone Project Contributors</h2>
+              <p class="section-subtitle">
+                Laguna State Polytechnic University &bull; College of Computer Studies &bull; BS Information Technology
+              </p>
+            </div>
+
+            <div class="team-grid">
+              <!-- Capstone Adviser -->
+              <div class="team-member-card adviser">
+                <span class="adviser-label">Capstone Adviser</span>
+                <div class="member-avatar">
+                  <img src="assets/images/Mosico.png" alt="Gener F. Mosico, MSIT" />
+                </div>
+                <h3>Gener F. Mosico</h3>
+                <p class="member-role">Capstone Adviser<br>Faculty Mentor</p>
+              </div>
+
+              <!-- Jasmin Clara S. Pacia -->
+              <div class="team-member-card">
+                <div class="member-avatar">
+                  <img src="assets/images/PACIA (2).png" alt="Jasmin Clara S. Pacia" />
+                </div>
+                <h3>Jasmin Clara S. Pacia</h3>
+                <p class="member-role">Project Leader<br>Research &amp; Communication<br>Quality Assurance</p>
+                <div class="member-socials" aria-label="Jasmin Clara S. Pacia social links">
+                  <a href="https://github.com/jast27" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="member-social-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.35-1.18-3.35-1.18-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.21-.25-4.54-1.1-4.54-4.9 0-1.08.39-1.97 1.03-2.66-.1-.25-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.02A9.49 9.49 0 0 1 12 6.84c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.41.1 2.66.64.69 1.03 1.58 1.03 2.66 0 3.81-2.34 4.64-4.56 4.89.36.3.68.9.68 1.82v2.7c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+                  </a>
+                  <a href="https://www.linkedin.com/in/jasmin-clara-pacia-a3a770427/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" class="member-social-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.4a1.56 1.56 0 0 1 0 3.1ZM5.5 9.7h2.88v8.8H5.5V9.7Zm4.82 0h2.76v1.2h.04c.38-.72 1.32-1.48 2.72-1.48 2.91 0 3.45 1.9 3.45 4.38v4.7h-2.88v-4.4c0-1.05-.02-2.4-1.47-2.4-1.47 0-1.7 1.14-1.7 2.32v4.48H10.32V9.7Z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Jayzel B. Yasoña -->
+              <div class="team-member-card">
+                <div class="member-avatar">
+                  <img src="assets/images/Yasoña.png" alt="Jayzel B. Yasoña" />
+                </div>
+                <h3>Jayzel B. Yasoña</h3>
+                <p class="member-role">Web &amp; Mobile<br>Full Stack Developer</p>
+                <div class="member-socials" aria-label="Jayzel B. Yasoña social links">
+                  <a href="https://github.com/ja1152452" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="member-social-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.35-1.18-3.35-1.18-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.21-.25-4.54-1.1-4.54-4.9 0-1.08.39-1.97 1.03-2.66-.1-.25-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.02A9.49 9.49 0 0 1 12 6.84c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.41.1 2.66.64.69 1.03 1.58 1.03 2.66 0 3.81-2.34 4.64-4.56 4.89.36.3.68.9.68 1.82v2.7c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+                  </a>
+                  <a href="https://www.linkedin.com/in/jayzel-yaso%C3%B1a-2b977a428/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" class="member-social-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.4a1.56 1.56 0 0 1 0 3.1ZM5.5 9.7h2.88v8.8H5.5V9.7Zm4.82 0h2.76v1.2h.04c.38-.72 1.32-1.48 2.72-1.48 2.91 0 3.45 1.9 3.45 4.38v4.7h-2.88v-4.4c0-1.05-.02-2.4-1.47-2.4-1.47 0-1.7 1.14-1.7 2.32v4.48H10.32V9.7Z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Jhim Rainer M. Orphiano -->
+              <div class="team-member-card">
+                <div class="member-avatar">
+                  <img src="assets/images/Orphiano.jpg" alt="Jhim Rainer M. Orphiano" />
+                </div>
+                <h3>Jhim Rainer M. Orphiano</h3>
+                <p class="member-role">Research &amp; Communication<br>UX Developer</p>
+                <div class="member-socials" aria-label="Jhim Rainer M. Orphiano social links">
+                  <a href="https://github.com/orphianojhimrainer-hub" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="member-social-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.35-1.18-3.35-1.18-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.21-.25-4.54-1.1-4.54-4.9 0-1.08.39-1.97 1.03-2.66-.1-.25-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.02A9.49 9.49 0 0 1 12 6.84c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.41.1 2.66.64.69 1.03 1.58 1.03 2.66 0 3.81-2.34 4.64-4.56 4.89.36.3.68.9.68 1.82v2.7c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+                  </a>
+                  <a href="https://www.linkedin.com/in/jhim-rainer-orphiano-b66775427/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" class="member-social-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.4a1.56 1.56 0 0 1 0 3.1ZM5.5 9.7h2.88v8.8H5.5V9.7Zm4.82 0h2.76v1.2h.04c.38-.72 1.32-1.48 2.72-1.48 2.91 0 3.45 1.9 3.45 4.38v4.7h-2.88v-4.4c0-1.05-.02-2.4-1.47-2.4-1.47 0-1.7 1.14-1.7 2.32v4.48H10.32V9.7Z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <strong>Flood Monitoring &amp; Predictive Evacuation System</strong>
+              <p>For the Municipality of Lumban, Laguna. A Capstone Project presented to the College of Computer Studies, Laguna State Polytechnic University.</p>
+            </div>
+            <div class="footer-links-col">
+              <h4>Research Sections</h4>
+              <ul>
+                <li><a href="#overview">Research Title</a></li>
+                <li><a href="#problem">Statement of the Problem</a></li>
+                <li><a href="#objectives">Objectives</a></li>
+                <li><a href="#methodology">Methodology</a></li>
+                <li><a href="#testing">Testing &amp; Evaluation</a></li>
+              </ul>
+            </div>
+            <div class="footer-links-col">
+              <h4>System Navigation</h4>
+              <ul>
+                <li><a href="#features">Core Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="screenshots.html">Detailed Gallery</a></li>
+                <li><a href="#workflow">Operational Workflow</a></li>
+                <li><a href="#team">Research Team</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>&copy; 2026 ResQConnect. Laguna State Polytechnic University &bull; BSIT.</p>
+            <a href="#top">Back to top &uarr;</a>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Back to Top Button -->
+      <button class="back-to-top" type="button" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+      </button>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
