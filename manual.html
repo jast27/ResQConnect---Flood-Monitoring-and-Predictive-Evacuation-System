@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="System & Technical Administration Manual: Flood Monitoring & Disaster Response Management System. Architecture, Deployment, Edge AI IoT Configuration & Maintenance Guide."
+    />
+    <title>System &amp; Technical Administration Manual | ResQConnect</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css?v=10" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <!-- Navigation Topbar -->
+      <header class="topbar" id="top">
+        <div class="container nav">
+          <a class="brand-wrap" href="index.html">
+            <img src="assets/images/logo.png?v=2" alt="ResQConnect Logo" class="brand-logo" />
+            <div class="brand-copy">
+              <span class="brand-kicker">Municipality of Lumban, Laguna</span>
+              <strong>Capstone Project</strong>
+            </div>
+          </a>
+
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Overview</a>
+            <a href="index.html#problem">Problem</a>
+            <a href="index.html#features">Features</a>
+            <a href="screenshots.html">Screenshots</a>
+            <a href="manual.html" class="is-active">Tech Manual</a>
+            <a href="user-manual.html">User Manual</a>
+            <a href="https://github.com/ja1152452/Flood_Monitoring" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="#links">Links</a>
+          </nav>
+
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Subbar / Manual Navigation Tabs -->
+      <div class="manual-subbar">
+        <div class="manual-container manual-subbar-inner">
+          <div class="manual-nav-tabs" role="tablist" aria-label="System Manuals">
+            <a href="manual.html" class="manual-nav-tab is-active" role="tab" aria-selected="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <span>1. Technical Admin Manual</span>
+            </a>
+            <a href="user-manual.html" class="manual-nav-tab" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span>2. User Operational Manual</span>
+            </a>
+          </div>
+          <div class="manual-subbar-actions">
+            <button type="button" class="manual-action-btn" onclick="window.print()" title="Print or Save as PDF">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              <span>Print / PDF</span>
+            </button>
+            <a href="https://github.com/ja1152452/Flood_Monitoring" target="_blank" rel="noopener noreferrer" class="manual-action-btn btn-primary-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.35-1.18-3.35-1.18-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.21-.25-4.54-1.1-4.54-4.9 0-1.08.39-1.97 1.03-2.66-.1-.25-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.02A9.49 9.49 0 0 1 12 6.84c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.41.1 2.66.64.69 1.03 1.58 1.03 2.66 0 3.81-2.34 4.64-4.56 4.89.36.3.68.9.68 1.82v2.7c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+              <span>View Repository</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Documentation Page -->
+      <main class="manual-page-main">
+        <div class="manual-container">
+          <div class="manual-layout">
+            <!-- Left Sticky Sidebar: Table of Contents -->
+            <aside class="manual-sidebar" aria-label="Table of Contents">
+              <h3 class="manual-sidebar-title">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+                Table of Contents
+              </h3>
+              <nav>
+                <ul class="manual-toc-list">
+                  <li><a href="#1-system-architecture-overview" class="manual-toc-link"><span class="manual-toc-num">1.</span> Architecture Overview</a></li>
+                  <li><a href="#2-server--development-environment-setup" class="manual-toc-link"><span class="manual-toc-num">2.</span> Environment Setup</a></li>
+                  <li><a href="#3-database-configuration--migrations" class="manual-toc-link"><span class="manual-toc-num">3.</span> Database &amp; Migrations</a></li>
+                  <li><a href="#4-backend-api-engine-deployment" class="manual-toc-link"><span class="manual-toc-num">4.</span> Backend API Engine</a></li>
+                  <li><a href="#5-frontend-web-application-deployment" class="manual-toc-link"><span class="manual-toc-num">5.</span> Frontend Web Deployment</a></li>
+                  <li><a href="#6-mobile-application-build--distribution-expo-eas" class="manual-toc-link"><span class="manual-toc-num">6.</span> Mobile Build (Expo EAS)</a></li>
+                  <li><a href="#7-edge-ai-station-setup-raspberry-pi--tapo-c310" class="manual-toc-link"><span class="manual-toc-num">7.</span> Edge AI Station (Pi &amp; Tapo)</a></li>
+                  <li><a href="#8-production-cloud-deployment-railwayapp" class="manual-toc-link"><span class="manual-toc-num">8.</span> Cloud Deploy (Railway)</a></li>
+                  <li><a href="#9-backup-recovery--database-maintenance" class="manual-toc-link"><span class="manual-toc-num">9.</span> Backup &amp; Recovery</a></li>
+                  <li><a href="#10-troubleshooting--diagnostic-matrix" class="manual-toc-link"><span class="manual-toc-num">10.</span> Troubleshooting Matrix</a></li>
+                </ul>
+              </nav>
+            </aside>
+
+            <!-- Main Technical Document Body -->
+            <article class="manual-content">
+              <!-- Document Header Title Banner -->
+              <header class="manual-doc-header">
+                <span class="manual-meta-pill">Municipal DRRMO &bull; Production Administration Manual</span>
+                <h1 class="manual-doc-title">SYSTEM &amp; TECHNICAL ADMINISTRATION MANUAL</h1>
+                <h2 class="manual-doc-subtitle">Flood Monitoring &amp; Disaster Response Management System</h2>
+                <p class="manual-doc-scope"><em>(Architecture, Deployment, Edge AI IoT Configuration &amp; Maintenance Guide)</em></p>
+              </header>
+
+              <!-- Section 1 -->
+              <section id="1-system-architecture-overview" class="manual-section">
+                <h2 class="manual-section-h2">1. System Architecture Overview</h2>
+                <p class="manual-prose">
+                  The system operates on a distributed, resilient three-tier architecture:
+                </p>
+
+                <div class="manual-ascii-box" aria-label="System Architecture Diagram">
+                  <pre>┌─────────────────────────┐         RTSP Stream         ┌──────────────────────────────┐
+│  TP-Link Tapo C310 CCTV │ ──────────────────────────&gt; │   Raspberry Pi 4/5 Edge      │
+│  (Outdoor 3MP Camera)   │                             │  ├─ FFmpeg (RTSP -&gt; HLS)     │
+└─────────────────────────┘                             │  └─ OpenCV / YOLO (7_sender) │
+                                                        └──────────────┬───────────────┘
+                                                                       │
+                                                            HTTPS POST /api/readings
+                                                                       │
+                                                                       ▼
+                                                        ┌──────────────────────────────┐
+                                                        │   Railway Cloud Server       │
+                                                        │  ├─ Node.js / Express API    │
+                                                        │  ├─ PostgreSQL Database      │
+                                                        │  ├─ Socket.io WebSocket Hub  │
+                                                        │  └─ Vite / React Admin Web   │
+                                                        └──────────────┬───────────────┘
+                                                                       │
+                                                           WebSockets / HTTPS REST
+                                                                       │
+                                                                       ▼
+                                                        ┌──────────────────────────────┐
+                                                        │   ResQConnect Mobile App     │
+                                                        │   (React Native / Expo APK)  │
+                                                        └──────────────────────────────┘</pre>
+                </div>
+              </section>
+
+              <!-- Section 2 -->
+              <section id="2-server--development-environment-setup" class="manual-section">
+                <h2 class="manual-section-h2">2. Server &amp; Development Environment Setup</h2>
+
+                <h3 class="manual-section-h3">2.1 Software Prerequisites</h3>
+                <p class="manual-prose">Install the following dependencies on the host server or administrator workstation:</p>
+                <ul class="manual-list">
+                  <li><strong>Node.js:</strong> <code>v20.x LTS</code> or higher (Verify with <code>node -v</code>)</li>
+                  <li><strong>npm:</strong> <code>v10.x</code> or higher (Verify with <code>npm -v</code>)</li>
+                  <li><strong>PostgreSQL:</strong> <code>v15.x</code> or <code>v16.x</code> (Verify with <code>psql --version</code>)</li>
+                  <li><strong>Python:</strong> <code>v3.10.x</code> or <code>v3.11.x</code> (Verify with <code>python --version</code>)</li>
+                  <li><strong>Git:</strong> Latest version (Verify with <code>git --version</code>)</li>
+                  <li><strong>Docker &amp; Docker Compose:</strong> Optional for containerized deployments.</li>
+                </ul>
+
+                <h3 class="manual-section-h3">2.2 Cloning the Repository</h3>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>git clone https://github.com/ja1152452/Flood_Monitoring.git
+cd Flood_Monitoring</code></pre>
+                </div>
+              </section>
+
+              <!-- Section 3 -->
+              <section id="3-database-configuration--migrations" class="manual-section">
+                <h2 class="manual-section-h2">3. Database Configuration &amp; Migrations</h2>
+
+                <h3 class="manual-section-h3">3.1 PostgreSQL Database Provisioning</h3>
+                <p class="manual-prose">1. Access the PostgreSQL command line shell:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>psql -U postgres</code></pre>
+                </div>
+
+                <p class="manual-prose">2. Create the production database and privileged user:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">SQL</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>CREATE DATABASE floodmonitor_db;
+CREATE USER flood_admin WITH ENCRYPTED PASSWORD 'YourSecurePassword123!';
+GRANT ALL PRIVILEGES ON DATABASE floodmonitor_db TO flood_admin;
+\q</code></pre>
+                </div>
+
+                <h3 class="manual-section-h3">3.2 Running Schema Migrations</h3>
+                <p class="manual-prose">1. Navigate to the backend directory:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>cd flood_monitor/backend</code></pre>
+                </div>
+
+                <p class="manual-prose">2. Execute the automated migration script:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>npm run migrate</code></pre>
+                </div>
+
+                <p class="manual-prose">
+                  3. The migration script executes <code>src/config/migrate.js</code>, constructing the relational tables, custom enumerations (<code>user_role</code>, <code>flood_status</code>, <code>sos_status</code>), triggers, and audit log tables.
+                </p>
+              </section>
+
+              <!-- Section 4 -->
+              <section id="4-backend-api-engine-deployment" class="manual-section">
+                <h2 class="manual-section-h2">4. Backend API Engine Deployment</h2>
+
+                <h3 class="manual-section-h3">4.1 Installing Backend Dependencies</h3>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>cd flood_monitor/backend
+npm install</code></pre>
+                </div>
+
+                <h3 class="manual-section-h3">4.2 Environment Configuration (<code>.env</code>)</h3>
+                <p class="manual-prose">Create a <code>.env</code> file in <code>flood_monitor/backend/</code> using the following schema:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Env</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code># Server Network Settings
+PORT=5000
+NODE_ENV=production
+
+# PostgreSQL Database Connection URL
+DATABASE_URL=postgresql://flood_admin:YourSecurePassword123!@localhost:5432/floodmonitor_db
+
+# JWT Security Secrets
+JWT_SECRET=super_secret_jwt_key_random_string_change_in_production
+JWT_EXPIRES_IN=7d
+
+# CORS Allowed Origins
+CORS_ORIGIN=http://localhost:5173,https://your-domain.railway.app
+
+# Firebase Service Account (For Push Notifications)
+FIREBASE_PROJECT_ID=your-project-id
+FIREBASE_CLIENT_EMAIL=firebase-adminsdk@your-project.iam.gserviceaccount.com
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYourKeyHere\n-----END PRIVATE KEY-----\n"
+
+# Weather API
+OPENWEATHER_API_KEY=your_openweather_api_key</code></pre>
+                </div>
+
+                <h3 class="manual-section-h3">4.3 Starting the Backend Engine</h3>
+                <ul class="manual-list">
+                  <li><strong>Development Mode (with auto-reload):</strong></li>
+                </ul>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>npm run dev</code></pre>
+                </div>
+
+                <ul class="manual-list">
+                  <li><strong>Production Mode:</strong></li>
+                </ul>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>npm start</code></pre>
+                </div>
+
+                <p class="manual-prose">
+                  Verify server status by requesting health check: <code>curl http://localhost:5000/api/health</code>
+                </p>
+              </section>
+
+              <!-- Section 5 -->
+              <section id="5-frontend-web-application-deployment" class="manual-section">
+                <h2 class="manual-section-h2">5. Frontend Web Application Deployment</h2>
+
+                <h3 class="manual-section-h3">5.1 Installing Frontend Dependencies</h3>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>cd flood_monitor/frontend
+npm install</code></pre>
+                </div>
+
+                <h3 class="manual-section-h3">5.2 Environment Configuration (<code>.env.production</code>)</h3>
+                <p class="manual-prose">Create a <code>.env.production</code> file in <code>flood_monitor/frontend/</code>:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Env</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>VITE_API_URL=https://your-backend-api.railway.app
+VITE_SOCKET_URL=https://your-backend-api.railway.app
+VITE_MAP_TILES_URL=https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png</code></pre>
+                </div>
+
+                <h3 class="manual-section-h3">5.3 Building for Production</h3>
+                <p class="manual-prose">Compile the optimized static bundle:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>npm run build</code></pre>
+                </div>
+                <p class="manual-prose">
+                  The compiled output is generated in <code>flood_monitor/frontend/dist/</code> ready to be served via Nginx, Apache, or Railway static hosting.
+                </p>
+              </section>
+
+              <!-- Section 6 -->
+              <section id="6-mobile-application-build--distribution-expo-eas" class="manual-section">
+                <h2 class="manual-section-h2">6. Mobile Application Build &amp; Distribution (Expo EAS)</h2>
+
+                <h3 class="manual-section-h3">6.1 Prerequisites</h3>
+                <p class="manual-prose">Install the Expo Application Services (EAS) command-line interface globally:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>npm install -g eas-cli</code></pre>
+                </div>
+
+                <h3 class="manual-section-h3">6.2 Configuring EAS Build</h3>
+                <p class="manual-prose">Navigate to the mobile directory and log in to your Expo account:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>cd flood_monitor/mobile
+eas login
+eas build:configure</code></pre>
+                </div>
+
+                <h3 class="manual-section-h3">6.3 Generating the Standalone Release APK</h3>
+                <p class="manual-prose">Run the cloud build command to produce an installable Android APK:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>eas build -p android --profile preview</code></pre>
+                </div>
+                <p class="manual-prose">
+                  Once compilation completes, download the generated binary file (<code>ResQConnect-Release.apk</code>) and distribute it to municipal responders and community citizens.
+                </p>
+              </section>
+
+              <!-- Section 7 -->
+              <section id="7-edge-ai-station-setup-raspberry-pi--tapo-c310" class="manual-section">
+                <h2 class="manual-section-h2">7. Edge AI Station Setup (Raspberry Pi &amp; Tapo C310)</h2>
+
+                <h3 class="manual-section-h3">7.1 Tapo C310 CCTV Setup &amp; Fixed IP Configuration</h3>
+                <ol class="manual-list">
+                  <li>Connect the Tapo C310 camera to power and pair it with the <strong>TP-Link Tapo App</strong> on a mobile device.</li>
+                  <li>In camera settings, assign a static local IP address (e.g., <code>192.168.1.150</code>).</li>
+                  <li>Enable <strong>Advanced Settings &rarr; Camera Account</strong>:
+                    <ul class="manual-list" style="margin-top: 8px;">
+                      <li>Username: <code>cctv_admin</code></li>
+                      <li>Password: <code>CameraPassword123!</code></li>
+                    </ul>
+                  </li>
+                  <li>Verify RTSP stream accessibility using VLC media player:
+                    <div class="manual-code-card">
+                      <div class="manual-code-topbar">
+                        <span class="manual-code-lang">RTSP</span>
+                        <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                      </div>
+                      <pre class="manual-code-content"><code>rtsp://cctv_admin:CameraPassword123!@192.168.1.150:554/stream1</code></pre>
+                    </div>
+                  </li>
+                </ol>
+
+                <h3 class="manual-section-h3">7.2 Raspberry Pi Software Setup</h3>
+                <p class="manual-prose">Execute on the Raspberry Pi:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>sudo apt update &amp;&amp; sudo apt upgrade -y
+sudo apt install -y python3-pip python3-venv ffmpeg git
+cd ~
+git clone https://github.com/ja1152452/Flood_Monitoring.git
+cd Flood_Monitoring/flood_ai
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt</code></pre>
+                </div>
+
+                <h3 class="manual-section-h3">7.3 Calibrating the Water Level Staff Gauge</h3>
+                <p class="manual-prose">1. Capture a reference calibration frame from the camera:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>python3 test_camera.py</code></pre>
+                </div>
+
+                <p class="manual-prose">2. Launch the interactive calibration script to select Region of Interest (ROI) and define pixel-to-meter ratios:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>python3 3_calibrate.py</code></pre>
+                </div>
+                <p class="manual-prose">
+                  3. The generated pixel coordinates and water thresholds are saved automatically into <code>calibration.json</code>.
+                </p>
+
+                <h3 class="manual-section-h3">7.4 Setting Up Continuous Edge Services (Systemd)</h3>
+                <p class="manual-prose">Create a persistent daemon service so the AI sender runs continuously and restarts on reboot:</p>
+                <p class="manual-prose">1. Copy the systemd service file:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>sudo cp flood-ai.service /etc/systemd/system/</code></pre>
+                </div>
+
+                <p class="manual-prose">2. Enable and start the edge service:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>sudo systemctl daemon-reload
+sudo systemctl enable flood-ai.service
+sudo systemctl start flood-ai.service</code></pre>
+                </div>
+
+                <p class="manual-prose">3. Inspect live operational logs:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>journalctl -u flood-ai.service -f</code></pre>
+                </div>
+              </section>
+
+              <!-- Section 8 -->
+              <section id="8-production-cloud-deployment-railwayapp" class="manual-section">
+                <h2 class="manual-section-h2">8. Production Cloud Deployment (Railway.app)</h2>
+                <p class="manual-prose">
+                  The system includes pre-configured <code>docker-compose.yml</code> and Nixpacks manifests for one-click deployment on Railway:
+                </p>
+                <ol class="manual-list">
+                  <li>Log in to <a href="https://railway.app" target="_blank" rel="noopener noreferrer">Railway.app</a> and create a <strong>New Project</strong> linked to the GitHub repository.</li>
+                  <li><strong>Provision PostgreSQL Database:</strong>
+                    <ul class="manual-list" style="margin-top: 6px;">
+                      <li>Click <strong>+ New</strong> &rarr; <strong>Database</strong> &rarr; <strong>Add PostgreSQL</strong>.</li>
+                      <li>Note the internal database connection string variable (<code>DATABASE_URL</code>).</li>
+                    </ul>
+                  </li>
+                  <li><strong>Deploy Backend Service:</strong>
+                    <ul class="manual-list" style="margin-top: 6px;">
+                      <li>Set Root Directory to <code>/flood_monitor/backend</code>.</li>
+                      <li>Attach the <code>DATABASE_URL</code> environment variable.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Deploy Frontend Web Service:</strong>
+                    <ul class="manual-list" style="margin-top: 6px;">
+                      <li>Set Root Directory to <code>/flood_monitor/frontend</code>.</li>
+                      <li>Set Build Command: <code>npm run build</code>.</li>
+                      <li>Set Start Command: <code>npm run start</code> or static routing.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </section>
+
+              <!-- Section 9 -->
+              <section id="9-backup-recovery--database-maintenance" class="manual-section">
+                <h2 class="manual-section-h2">9. Backup, Recovery &amp; Database Maintenance</h2>
+
+                <h3 class="manual-section-h3">9.1 Creating a Full Database Backup</h3>
+                <p class="manual-prose">Execute a compressed SQL dump:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>pg_dump -U flood_admin -h localhost floodmonitor_db > floodmonitor_backup_$(date +%Y%m%d).sql</code></pre>
+                </div>
+
+                <h3 class="manual-section-h3">9.2 Restoring Database from Backup</h3>
+                <p class="manual-prose">In the event of hardware failure or database corruption:</p>
+                <p class="manual-prose">1. Drop the corrupted database:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>dropdb -U postgres floodmonitor_db
+createdb -U postgres floodmonitor_db</code></pre>
+                </div>
+
+                <p class="manual-prose">2. Restore from SQL archive:</p>
+                <div class="manual-code-card">
+                  <div class="manual-code-topbar">
+                    <span class="manual-code-lang">Bash</span>
+                    <button type="button" class="manual-code-copy-btn" onclick="copyCode(this)">Copy</button>
+                  </div>
+                  <pre class="manual-code-content"><code>psql -U flood_admin -d floodmonitor_db -f floodmonitor_backup_20260908.sql</code></pre>
+                </div>
+              </section>
+
+              <!-- Section 10 -->
+              <section id="10-troubleshooting--diagnostic-matrix" class="manual-section">
+                <h2 class="manual-section-h2">10. Troubleshooting &amp; Diagnostic Matrix</h2>
+                <div class="manual-table-wrap">
+                  <table class="manual-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 32%;">Symptom / Error</th>
+                        <th style="width: 33%;">Root Cause</th>
+                        <th style="width: 35%;">Verified Resolution</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="badge-err">column status is of type sos_status but expression is of type text</span></td>
+                        <td>PostgreSQL strict enum type mismatch in parameterized SQL dispatch query.</td>
+                        <td><span class="badge-res">Cast parameter explicitly in query:</span> <code>WHERE status = $1::sos_status</code> (Resolved in commit <code>f15c0dc</code>).</td>
+                      </tr>
+                      <tr>
+                        <td><strong>CCTV Live Stream Black Screen / HLS Not Loading</strong></td>
+                        <td>FFmpeg RTSP process terminated or on-site bandwidth degradation.</td>
+                        <td>Verify camera connectivity: <code>ping 192.168.1.150</code>. Restart streaming service: <code>sudo systemctl restart flood-ai.service</code>.</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge-err">ECONNREFUSED 127.0.0.1:5432</span></td>
+                        <td>PostgreSQL daemon is inactive or port 5432 is blocked.</td>
+                        <td>Verify database status: <code>sudo systemctl status postgresql</code>. Ensure <code>DATABASE_URL</code> matches credentials.</td>
+                      </tr>
+                      <tr>
+                        <td><strong>WebSocket / Socket.io Disconnecting Frequently</strong></td>
+                        <td>Reverse proxy timeout or missing WebSocket header upgrades.</td>
+                        <td>In Nginx or proxy config, ensure headers: <code>Upgrade $http_upgrade; Connection "upgrade";</code>.</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Mobile App Cannot Send SOS / Network Error</strong></td>
+                        <td>Backend URL configured to <code>localhost</code> instead of public HTTPS domain.</td>
+                        <td>Update <code>VITE_API_URL</code> in mobile <code>.env</code> to point to production Railway HTTPS URL, then recompile APK.</td>
+                      </tr>
+                      <tr>
+                        <td><strong>AI Sensor Reporting Erratic Water Levels</strong></td>
+                        <td>Camera shifted position or nighttime glare obscured staff gauge marks.</td>
+                        <td>Re-run <code>python3 3_calibrate.py</code> to re-align gauge ROI markers and adjust IR night illumination.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </article>
+          </div>
+        </div>
+      </main>
+
+      <!-- Links & Footer Section -->
+      <footer class="site-footer" id="links">
+        <div class="container footer-container">
+          <!-- Section Heading with Red Accent Line -->
+          <div class="footer-links-header">
+            <div class="footer-links-accent" aria-hidden="true"></div>
+            <h2 class="footer-links-title">Links</h2>
+          </div>
+
+          <!-- Action Buttons (GitHub Source Code & Live System Demo) -->
+          <div class="footer-links-actions">
+            <a href="https://github.com/ja1152452/Flood_Monitoring" target="_blank" rel="noopener noreferrer" class="footer-btn footer-btn-github">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.35-1.18-3.35-1.18-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.21-.25-4.54-1.1-4.54-4.9 0-1.08.39-1.97 1.03-2.66-.1-.25-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.02A9.49 9.49 0 0 1 12 6.84c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.41.1 2.66.64.69 1.03 1.58 1.03 2.66 0 3.81-2.34 4.64-4.56 4.89.36.3.68.9.68 1.82v2.7c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/>
+              </svg>
+              <span>GitHub Source Code</span>
+            </a>
+            <a href="screenshots.html" class="footer-btn footer-btn-demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <span>View System UI</span>
+            </a>
+          </div>
+
+          <!-- Academic & Capstone Attribution Metadata -->
+          <div class="footer-metadata">
+            <p class="footer-meta-line footer-copyright">
+              &copy; 2026 ResQConnect: Development of an Image-Processing-Driven Flood Monitoring and Predictive Evacuation System. All Rights Reserved.
+            </p>
+            <p class="footer-meta-line footer-authors">
+              Developed by Jasmin Clara S. Pacia, Jayzel B. Yaso&ntilde;a, and Jhim Rainer M. Orphiano.
+            </p>
+            <p class="footer-meta-line footer-partner">
+              In Partnership with Municipality of Lumban, Laguna (MDRRMO &amp; MSWDO).
+            </p>
+            <p class="footer-meta-line footer-institution">
+              Laguna State Polytechnic University &ndash; Santa Cruz Campus | College of Computer Studies.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Back to Top Button -->
+      <button class="back-to-top" type="button" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+      </button>
+    </div>
+
+    <!-- Script: Main and Interactive Copy Helper -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      function copyCode(btn) {
+        const card = btn.closest('.manual-code-card');
+        const code = card.querySelector('code');
+        if (!code) return;
+        const text = code.innerText;
+        navigator.clipboard.writeText(text).then(() => {
+          const orig = btn.innerText;
+          btn.innerText = 'Copied!';
+          btn.style.backgroundColor = '#166534';
+          btn.style.color = '#ffffff';
+          setTimeout(() => {
+            btn.innerText = orig;
+            btn.style.backgroundColor = '';
+            btn.style.color = '';
+          }, 2000);
+        }).catch(() => {
+          btn.innerText = 'Error';
+        });
+      }
+
+      // Intersection Observer to highlight active TOC link while scrolling
+      document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('.manual-section');
+        const navLinks = document.querySelectorAll('.manual-toc-link');
+
+        window.addEventListener('scroll', () => {
+          let current = '';
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 120;
+            if (window.scrollY >= sectionTop) {
+              current = section.getAttribute('id');
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove('is-active');
+            if (link.getAttribute('href') === '#' + current) {
+              link.classList.add('is-active');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

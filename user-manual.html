@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="User Operational Manual: Flood Monitoring & Disaster Response Management System (ResQConnect Mobile Application & MDRRMO/MSWDO Command Center Web Portals)."
+    />
+    <title>User Operational Manual | ResQConnect</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css?v=10" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <!-- Navigation Topbar -->
+      <header class="topbar" id="top">
+        <div class="container nav">
+          <a class="brand-wrap" href="index.html">
+            <img src="assets/images/logo.png?v=2" alt="ResQConnect Logo" class="brand-logo" />
+            <div class="brand-copy">
+              <span class="brand-kicker">Municipality of Lumban, Laguna</span>
+              <strong>Capstone Project</strong>
+            </div>
+          </a>
+
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Overview</a>
+            <a href="index.html#problem">Problem</a>
+            <a href="index.html#features">Features</a>
+            <a href="screenshots.html">Screenshots</a>
+            <a href="manual.html">Tech Manual</a>
+            <a href="user-manual.html" class="is-active">User Manual</a>
+            <a href="https://github.com/ja1152452/Flood_Monitoring" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="#links">Links</a>
+          </nav>
+
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Subbar / Manual Navigation Tabs -->
+      <div class="manual-subbar">
+        <div class="manual-container manual-subbar-inner">
+          <div class="manual-nav-tabs" role="tablist" aria-label="System Manuals">
+            <a href="manual.html" class="manual-nav-tab" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <span>1. Technical Admin Manual</span>
+            </a>
+            <a href="user-manual.html" class="manual-nav-tab is-active" role="tab" aria-selected="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span>2. User Operational Manual</span>
+            </a>
+          </div>
+
+          <div class="manual-subbar-actions">
+            <button type="button" class="manual-action-btn" onclick="window.print()" title="Print or Save as PDF">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              <span>Print / PDF</span>
+            </button>
+            <a href="screenshots.html" class="manual-action-btn btn-primary-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              <span>View System UI</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Documentation Page -->
+      <main class="manual-page-main">
+        <div class="manual-container">
+          <div class="manual-layout">
+            <!-- Left Sticky Sidebar: Table of Contents -->
+            <aside class="manual-sidebar" aria-label="Table of Contents">
+              <h3 class="manual-sidebar-title">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+                Table of Contents
+              </h3>
+              <nav>
+                <ul class="manual-toc-list">
+                  <li><a href="#1-introduction--purpose" class="manual-toc-link"><span class="manual-toc-num">1.</span> Introduction &amp; Purpose</a></li>
+                  <li><a href="#2-resident--citizen-user-manual-resqconnect-mobile" class="manual-toc-link"><span class="manual-toc-num">2.</span> Resident Mobile Manual</a></li>
+                  <li><a href="#3-emergency-responder-user-manual-resqconnect-field-mode" class="manual-toc-link"><span class="manual-toc-num">3.</span> Responder Field Manual</a></li>
+                  <li><a href="#4-mdrrmo-administrator-user-manual-web-command-center" class="manual-toc-link"><span class="manual-toc-num">4.</span> MDRRMO Command Center</a></li>
+                  <li><a href="#5-mswdo-officer-user-manual-web-evacuation-portal" class="manual-toc-link"><span class="manual-toc-num">5.</span> MSWDO Evacuation Portal</a></li>
+                  <li><a href="#6-emergency-procedures--hotlines" class="manual-toc-link"><span class="manual-toc-num">6.</span> Emergency Hotlines</a></li>
+                </ul>
+              </nav>
+            </aside>
+
+            <!-- Main Technical Document Body -->
+            <article class="manual-content">
+              <!-- Document Header Title Banner -->
+              <header class="manual-doc-header">
+                <span class="manual-meta-pill">Municipal DRRMO &bull; Operational User Guide</span>
+                <h1 class="manual-doc-title">USER OPERATIONAL MANUAL</h1>
+                <h2 class="manual-doc-subtitle">Flood Monitoring &amp; Disaster Response Management System</h2>
+                <p class="manual-doc-scope"><em>(ResQConnect Mobile Application &amp; MDRRMO/MSWDO Command Center Web Portals)</em></p>
+              </header>
+
+              <!-- Section 1 -->
+              <section id="1-introduction--purpose" class="manual-section">
+                <h2 class="manual-section-h2">1. Introduction &amp; Purpose</h2>
+                <p class="manual-prose">
+                  This User Operational Manual provides comprehensive, step-by-step instructions for operating the <strong>Flood Monitoring &amp; Disaster Response Management System</strong>.
+                </p>
+                <p class="manual-prose">The system serves four distinct user groups:</p>
+                <ul class="manual-list">
+                  <li><strong>Community Residents / Citizens:</strong> Monitored via the <strong>ResQConnect Mobile Application</strong>.</li>
+                  <li><strong>Emergency Responders / Rescue Teams:</strong> Dispatched via the <strong>ResQConnect Mobile Application (Field Mode)</strong>.</li>
+                  <li><strong>MDRRMO Officers &amp; Incident Commanders:</strong> Operating via the <strong>Web Command Center Portal</strong>.</li>
+                  <li><strong>MSWDO Evacuation Camp Managers:</strong> Operating via the <strong>MSWDO Relief &amp; Evacuation Web Portal</strong>.</li>
+                </ul>
+              </section>
+
+              <!-- Section 2 -->
+              <section id="2-resident--citizen-user-manual-resqconnect-mobile" class="manual-section">
+                <h2 class="manual-section-h2">2. Resident / Citizen User Manual (ResQConnect Mobile)</h2>
+
+                <h3 class="manual-section-h3">2.1 Application Installation &amp; First-Time Launch</h3>
+                <ol class="manual-list">
+                  <li>Download and install <code>ResQConnect-Release.apk</code> on your Android smartphone (Android 8.0 or higher required).</li>
+                  <li>Launch the application from your home screen or app drawer.</li>
+                  <li>Grant required permissions when prompted:
+                    <ul class="manual-list" style="margin-top: 6px;">
+                      <li><strong>Location Permission:</strong> Select <em>"While using the app"</em> or <em>"Always allow"</em> (crucial for GPS distress triangulation).</li>
+                      <li><strong>Notification Permission:</strong> Tap <em>"Allow"</em> to receive flood warnings and siren broadcasts.</li>
+                    </ul>
+                  </li>
+                </ol>
+
+                <h3 class="manual-section-h3">2.2 Account Registration &amp; OTP Verification</h3>
+                <ol class="manual-list">
+                  <li>On the initial screen, tap <strong>Create Account / Register</strong>.</li>
+                  <li>Complete the registration form: Full Name, Mobile Phone Number, Barangay of Residence, Email Address, and Password.</li>
+                  <li>Tap <strong>Submit Registration</strong>.</li>
+                  <li>Retrieve the <strong>6-digit One-Time Password (OTP)</strong> sent to your registered phone number.</li>
+                  <li>Enter the OTP code on the verification screen and tap <strong>Verify Account</strong>.</li>
+                  <li>Upon successful verification, log in using your registered credentials.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">2.3 Monitoring River Water Levels &amp; CCTV Feeds</h3>
+                <ol class="manual-list">
+                  <li>From the bottom navigation bar, tap <strong>Home / Dashboard</strong>.</li>
+                  <li>Review the <strong>Real-Time Water Elevation Card</strong>:
+                    <ul class="manual-list" style="margin-top: 6px;">
+                      <li><span class="status-badge-inline status-badge-normal">Normal (Green):</span> Safe river elevation; regular monitoring.</li>
+                      <li><span class="status-badge-inline status-badge-alert">Alert (Yellow):</span> River rising; community advised to remain vigilant.</li>
+                      <li><span class="status-badge-inline status-badge-warning">Warning (Orange):</span> Pre-evacuation recommended for low-lying flood zones.</li>
+                      <li><span class="status-badge-inline status-badge-critical">Critical (Red):</span> Severe flood risk; immediate mandatory evacuation ordered.</li>
+                    </ul>
+                  </li>
+                  <li>Tap <strong>Live CCTV Stream</strong> to watch real-time video surveillance of the Lumban river staff gauge.</li>
+                  <li>Swipe down to refresh hydrological sensor readings and rain radar overlays.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">2.4 Sending an Emergency SOS Distress Alert</h3>
+                <div class="manual-alert-critical" role="alert">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                  <div>
+                    <strong>CRITICAL NOTICE:</strong> Use this feature ONLY during genuine flood threats or life-threatening emergencies.
+                  </div>
+                </div>
+
+                <ol class="manual-list">
+                  <li>Navigate to the <strong>Emergency SOS</strong> tab (or tap the prominent Red SOS button on the home screen).</li>
+                  <li>Confirm or adjust your household demographic details:
+                    <ul class="manual-list" style="margin-top: 6px;">
+                      <li><strong>Headcount:</strong> Number of individuals requiring extraction.</li>
+                      <li><strong>Special Vulnerabilities:</strong> Check boxes for Seniors, Persons with Disabilities (PWDs), Infants, or Pregnant women.</li>
+                      <li><strong>Medical Emergencies:</strong> Specify immediate medical needs (e.g., insulin dependence, severe injury, hypothermia).</li>
+                    </ul>
+                  </li>
+                  <li>Press and hold the <strong>TRIGGER EMERGENCY SOS</strong> button for 3 seconds.</li>
+                  <li>Your precise GPS latitude and longitude, along with your profile data, will be transmitted instantly to the MDRRMO Command Center.</li>
+                  <li>Once received, the screen displays <strong>SOS DISPATCHED - RESCUE TEAM EN ROUTE</strong> with live tracking of assigned rescue units.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">2.5 Finding Nearest Evacuation Shelters</h3>
+                <ol class="manual-list">
+                  <li>Tap the <strong>Evacuation</strong> tab.</li>
+                  <li>View the map display of all designated evacuation facilities in Lumban.</li>
+                  <li>Tap on a shelter marker to review: Center Name, Location, Current Status (Open / Full), and Available Bed Capacity.</li>
+                  <li>Tap <strong>Get Safe Route</strong> to generate turn-by-turn navigation guiding you along flood-free roadways.</li>
+                </ol>
+              </section>
+
+              <!-- Section 3 -->
+              <section id="3-emergency-responder-user-manual-resqconnect-field-mode" class="manual-section">
+                <h2 class="manual-section-h2">3. Emergency Responder User Manual (ResQConnect Field Mode)</h2>
+
+                <h3 class="manual-section-h3">3.1 Responder Login &amp; Duty Status Activation</h3>
+                <ol class="manual-list">
+                  <li>Launch the <strong>ResQConnect</strong> app and enter your authorized responder credentials.</li>
+                  <li>The interface automatically detects your role and switches to <strong>Responder Mode</strong>.</li>
+                  <li>On the top status toggle, switch your duty status from <strong>OFF-DUTY</strong> to <strong>ACTIVE / ON-DUTY</strong>.</li>
+                  <li>Confirm that background GPS tracking is enabled; your location icon will appear on the MDRRMO Headquarters map.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">3.2 Receiving &amp; Accepting SOS Mission Dispatches</h3>
+                <ol class="manual-list">
+                  <li>When an SOS alert is dispatched by the command center, your device sounds an emergency siren ringtone with a full-screen mission modal.</li>
+                  <li>Review the incoming mission profile: Victim Name, Contact Number, Barangay, Exact GPS Distance, Headcount, and Medical Flags.</li>
+                  <li>Tap <strong>ACCEPT MISSION</strong> within 60 seconds:
+                    <ul class="manual-list" style="margin-top: 6px;">
+                      <li>Your status automatically updates to <strong>EN ROUTE</strong>.</li>
+                      <li>The MDRRMO Command Center and the stranded citizen are immediately notified of your deployment.</li>
+                    </ul>
+                  </li>
+                  <li>Tap <strong>Navigate</strong> to open built-in GPS routing directly to the citizen's distress coordinates.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">3.3 Requesting Multi-Agency Backup</h3>
+                <ol class="manual-list">
+                  <li>If on-site flood waters exceed standard wading levels or swift-water boat extraction is required:</li>
+                  <li>Tap <strong>REQUEST INTER-AGENCY BACKUP</strong> on the active mission screen.</li>
+                  <li>Select the required agency:
+                    <ul class="manual-list" style="margin-top: 6px;">
+                      <li><strong>PNP (Philippine National Police):</strong> Perimeter control &amp; crowd management.</li>
+                      <li><strong>BFP (Bureau of Fire Protection):</strong> High-angle rescue &amp; ladder extraction.</li>
+                      <li><strong>PCG (Philippine Coast Guard):</strong> Motorized rubber boat fleet.</li>
+                      <li><strong>RHU (Rural Health Unit):</strong> On-site paramedic &amp; emergency ambulance triage.</li>
+                    </ul>
+                  </li>
+                  <li>Tap <strong>Transmit Backup Request</strong>; the request is highlighted on the MDRRMO Command console.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">3.4 Concluding a Mission &amp; Submitting Incident Report</h3>
+                <ol class="manual-list">
+                  <li>Upon reaching the incident site, tap <strong>ARRIVED ON SCENE</strong> (status switches to <code>ON SCENE</code>).</li>
+                  <li>Conduct extraction, life safety support, or shelter transport.</li>
+                  <li>Once all victims are safely evacuated:</li>
+                  <li>Tap <strong>MARK RESCUE COMPLETED</strong>.</li>
+                  <li>Input a brief field report (Number of rescued citizens, destination evacuation center, remarks).</li>
+                  <li>Tap <strong>Submit Report</strong>. Your status resets to <strong>AVAILABLE</strong> for subsequent deployments.</li>
+                </ol>
+              </section>
+
+              <!-- Section 4 -->
+              <section id="4-mdrrmo-administrator-user-manual-web-command-center" class="manual-section">
+                <h2 class="manual-section-h2">4. MDRRMO Administrator User Manual (Web Command Center)</h2>
+
+                <h3 class="manual-section-h3">4.1 Access &amp; Command Authentication</h3>
+                <ol class="manual-list">
+                  <li>Open a modern web browser (Google Chrome or Microsoft Edge recommended) and navigate to the portal URL.</li>
+                  <li>Enter your authorized administrator email and password.</li>
+                  <li>Click <strong>Secure Login</strong>. Upon token validation, the <strong>MDRRMO Central Incident Command Dashboard</strong> loads.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">4.2 Central Dashboard Overview</h3>
+                <ul class="manual-list">
+                  <li><strong>Top Metric Ribbon:</strong> Displays current river water level (in meters), rate-of-rise trend (m/hr), active field responders count, and pending SOS alerts.</li>
+                  <li><strong>Live CCTV Stream Panel:</strong> Displays real-time 3MP video streaming from the Tapo C310 camera focused on the river staff gauge.</li>
+                  <li><strong>Live Water Level Chart:</strong> Interactive Recharts time-series graph displaying 24-hour river elevation trends against Alert, Warning, and Critical thresholds.</li>
+                  <li><strong>Emergency Siren Control:</strong> Prominent manual trigger button to engage municipal audible alarms during flash flood emergencies.</li>
+                </ul>
+
+                <h3 class="manual-section-h3">4.3 Triggering Audible Sirens &amp; Public Flood Advisories</h3>
+                <ol class="manual-list">
+                  <li>If the water level crosses the <strong>Warning (Orange)</strong> or <strong>Critical (Red)</strong> threshold:</li>
+                  <li>Click <strong>TRIGGER SIREN ALARM</strong> on the top dashboard bar.</li>
+                  <li>Confirm the action in the security modal:
+                    <ul class="manual-list" style="margin-top: 6px;">
+                      <li>An audible alarm tone sounds across all connected web consoles.</li>
+                      <li>A high-priority push notification is automatically broadcast to all registered citizens via Firebase Cloud Messaging.</li>
+                    </ul>
+                  </li>
+                  <li>To issue customized instructions, navigate to <strong>Announcements</strong>, type the official LGU bulletin, and click <strong>Broadcast Warning to All Users</strong>.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">4.4 Managing SOS Distress Calls &amp; Dispatching Units</h3>
+                <ol class="manual-list">
+                  <li>Navigate to the <strong>Rescue Operations</strong> tab (<code>/rescue</code>).</li>
+                  <li>Incoming distress signals are listed in the <strong>Active SOS Queue</strong> sorted by urgency and timestamp.</li>
+                  <li>Click on a distress ticket to highlight the victim's location marker on the interactive <strong>Lumban GIS Risk Map</strong>.</li>
+                  <li>The map displays color-coded icons for available responders (Green), en-route units (Yellow), and busy units (Red).</li>
+                  <li>Review the nearest active responder and click <strong>Dispatch Team</strong>.</li>
+                  <li>The selected responder's mobile device immediately receives the mission packet.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">4.5 Hydro-Meteorological Analytics &amp; Simulated Drills</h3>
+                <ol class="manual-list">
+                  <li>Navigate to the <strong>Analytics &amp; Reports</strong> tab (<code>/analytics</code>).</li>
+                  <li>Select date ranges to inspect historical water elevations, peak flood levels, and rate-of-rise statistics.</li>
+                  <li><strong>Simulated Drill Management:</strong>
+                    <ul class="manual-list" style="margin-top: 6px;">
+                      <li>To conduct disaster response drills without live flood conditions, toggle <strong>Simulation Mode</strong>.</li>
+                      <li>Use the <strong>Detailed Simulated Drill Readings</strong> table to review, edit timestamps, or apply date shifts for training exercises.</li>
+                    </ul>
+                  </li>
+                  <li>Click <strong>Export PDF Report</strong> to generate an official LGU disaster summary document complete with tables and charts.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">4.6 User Account Management &amp; Audit Logs</h3>
+                <ol class="manual-list">
+                  <li>Navigate to <strong>Users</strong> (<code>/users</code>) to review, create, or deactivate user accounts (Administrator, Responder, MSWDO, Citizen).</li>
+                  <li>Navigate to <strong>Audit Logs</strong> (<code>/audit-logs</code>) to review immutable security logs tracking all logins, emergency dispatches, siren triggers, and data modifications.</li>
+                </ol>
+              </section>
+
+              <!-- Section 5 -->
+              <section id="5-mswdo-officer-user-manual-web-evacuation-portal" class="manual-section">
+                <h2 class="manual-section-h2">5. MSWDO Officer User Manual (Web Evacuation Portal)</h2>
+
+                <h3 class="manual-section-h3">5.1 Accessing the MSWDO Portal</h3>
+                <ol class="manual-list">
+                  <li>Navigate to the MSWDO portal URL.</li>
+                  <li>Input authorized MSWDO credentials and click <strong>Sign In</strong>.</li>
+                  <li>The <strong>MSWDO Relief &amp; Evacuation Dashboard</strong> opens.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">5.2 Selecting and Managing an Evacuation Center</h3>
+                <ol class="manual-list">
+                  <li>From the top dropdown menu, select your assigned evacuation facility (e.g., <em>Lumban Central Elementary School</em>, <em>Barangay Sports Complex</em>).</li>
+                  <li>The center's profile card displays: Total Capacity, Current Headcount, Available Bed Space, and Occupancy Percentage.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">5.3 Evacuee Family Profiling &amp; Intake</h3>
+                <ol class="manual-list">
+                  <li>Navigate to <strong>Evacuees Masterlist</strong> (<code>/mswdo/evacuees</code>).</li>
+                  <li>Click <strong>Register New Evacuee Family</strong>.</li>
+                  <li>Input Family Information: Head of Household Name, Origin Barangay, Contact Number, Total Family Members.</li>
+                  <li>Tag Vulnerable Household Members: Check counts for <strong>Senior Citizens (60+)</strong>, <strong>Persons with Disabilities (PWDs)</strong>, <strong>Infants / Children (&lt;5)</strong>, and <strong>Pregnant / Lactating Mothers</strong>.</li>
+                  <li>Click <strong>Save &amp; Admit Family</strong>. The center's active occupancy updates automatically.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">5.4 Logging Relief Goods &amp; Food Pack Distribution</h3>
+                <ol class="manual-list">
+                  <li>In the active evacuee table, locate the family record.</li>
+                  <li>Click <strong>Log Relief Distribution</strong>.</li>
+                  <li>Check distributed items:
+                    <ul class="manual-list" style="margin-top: 6px;">
+                      <li><strong>Family Food Packs (FFP)</strong></li>
+                      <li><strong>Hygiene Kits</strong></li>
+                      <li><strong>Sleeping Kits / Blankets</strong></li>
+                      <li><strong>Bottled Potable Water</strong></li>
+                    </ul>
+                  </li>
+                  <li>Click <strong>Confirm Distribution</strong>. The transaction is timestamped and deducted from remaining camp inventory.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">5.5 Center Full-Capacity Overflow Protocols</h3>
+                <ol class="manual-list">
+                  <li>When registered evacuees reach 100% of maximum bed capacity:</li>
+                  <li>The center status automatically flags <strong>FULL CAPACITY</strong>.</li>
+                  <li>The system generates an automated overflow alert to the MDRRMO Command Center console.</li>
+                  <li>Mobile application routing automatically redirects subsequent evacuating citizens to the next nearest open facility.</li>
+                </ol>
+
+                <h3 class="manual-section-h3">5.6 Generating DROMIC Disaster Reports</h3>
+                <ol class="manual-list">
+                  <li>Navigate to <strong>Reports</strong> (<code>/mswdo/reports</code>).</li>
+                  <li>Select the active incident or date period.</li>
+                  <li>Click <strong>Generate DROMIC Report</strong> (Disaster Response Operations Monitoring and Information Center format).</li>
+                  <li>Click <strong>Download PDF</strong> or <strong>Export to Excel</strong> for formal submission to the Municipal Mayor, Provincial Social Welfare Office, and DSWD Region IV-A.</li>
+                </ol>
+              </section>
+
+              <!-- Section 6 -->
+              <section id="6-emergency-procedures--hotlines" class="manual-section">
+                <h2 class="manual-section-h2">6. Emergency Procedures &amp; Hotlines</h2>
+                <p class="manual-prose">
+                  In the event of network blackout or total cellular outage, follow manual communication protocols:
+                </p>
+
+                <div class="manual-table-wrap">
+                  <table class="manual-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 25%;">Agency</th>
+                        <th style="width: 30%;">Designation</th>
+                        <th style="width: 25%;">Hotline Number</th>
+                        <th style="width: 20%;">VHF Radio Frequency</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>MDRRMO Lumban</strong></td>
+                        <td>Emergency Command Center</td>
+                        <td>(049) 501-XXXX / 0917-XXX-XXXX</td>
+                        <td><code>145.500 MHz</code></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Lumban Municipal Police (PNP)</strong></td>
+                        <td>Law Enforcement &amp; Security</td>
+                        <td>0998-XXX-XXXX</td>
+                        <td><code>146.200 MHz</code></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Lumban Fire Station (BFP)</strong></td>
+                        <td>Search, Rescue &amp; Extrication</td>
+                        <td>0922-XXX-XXXX</td>
+                        <td><code>147.100 MHz</code></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Rural Health Unit (RHU)</strong></td>
+                        <td>Emergency Medical Services</td>
+                        <td>(049) 501-YYYY</td>
+                        <td>&mdash;</td>
+                      </tr>
+                      <tr>
+                        <td><strong>MSWDO Disaster Desk</strong></td>
+                        <td>Relief &amp; Welfare Assistance</td>
+                        <td>(049) 501-ZZZZ</td>
+                        <td>&mdash;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </article>
+          </div>
+        </div>
+      </main>
+
+      <!-- Links & Footer Section -->
+      <footer class="site-footer" id="links">
+        <div class="container footer-container">
+          <!-- Section Heading with Red Accent Line -->
+          <div class="footer-links-header">
+            <div class="footer-links-accent" aria-hidden="true"></div>
+            <h2 class="footer-links-title">Links</h2>
+          </div>
+
+          <!-- Action Buttons (GitHub Source Code & Live System Demo) -->
+          <div class="footer-links-actions">
+            <a href="https://github.com/ja1152452/Flood_Monitoring" target="_blank" rel="noopener noreferrer" class="footer-btn footer-btn-github">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.35-1.18-3.35-1.18-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.21-.25-4.54-1.1-4.54-4.9 0-1.08.39-1.97 1.03-2.66-.1-.25-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.02A9.49 9.49 0 0 1 12 6.84c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.41.1 2.66.64.69 1.03 1.58 1.03 2.66 0 3.81-2.34 4.64-4.56 4.89.36.3.68.9.68 1.82v2.7c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/>
+              </svg>
+              <span>GitHub Source Code</span>
+            </a>
+            <a href="screenshots.html" class="footer-btn footer-btn-demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <span>View System UI</span>
+            </a>
+          </div>
+
+          <!-- Academic & Capstone Attribution Metadata -->
+          <div class="footer-metadata">
+            <p class="footer-meta-line footer-copyright">
+              &copy; 2026 ResQConnect: Development of an Image-Processing-Driven Flood Monitoring and Predictive Evacuation System. All Rights Reserved.
+            </p>
+            <p class="footer-meta-line footer-authors">
+              Developed by Jasmin Clara S. Pacia, Jayzel B. Yaso&ntilde;a, and Jhim Rainer M. Orphiano.
+            </p>
+            <p class="footer-meta-line footer-partner">
+              In Partnership with Municipality of Lumban, Laguna (MDRRMO &amp; MSWDO).
+            </p>
+            <p class="footer-meta-line footer-institution">
+              Laguna State Polytechnic University &ndash; Santa Cruz Campus | College of Computer Studies.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Back to Top Button -->
+      <button class="back-to-top" type="button" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+      </button>
+    </div>
+
+    <!-- Script: Main and Interactive Scroll-Spy -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      // Intersection Observer to highlight active TOC link while scrolling
+      document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('.manual-section');
+        const navLinks = document.querySelectorAll('.manual-toc-link');
+
+        window.addEventListener('scroll', () => {
+          let current = '';
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 120;
+            if (window.scrollY >= sectionTop) {
+              current = section.getAttribute('id');
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove('is-active');
+            if (link.getAttribute('href') === '#' + current) {
+              link.classList.add('is-active');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
